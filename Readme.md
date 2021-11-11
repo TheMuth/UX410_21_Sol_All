@@ -43,8 +43,9 @@ npm run start-noflp
 
 > Tip: In the Trial environment you can sometimes get the message that you are low on resources (disk space). If you have a lot of projects you can clean up unneeded code with the next commands from the terminal in the **projects** folder:
 ```shell
-find . -type d -name node_modules -print0|xargs -0 rm -rf --
 find . -type d -name .git -print0|xargs -0 rm -rf --
+
+find . -type d -name node_modules -print0|xargs -0 rm -rf --
 find . -type d -name dist -print0|xargs -0 rm -rf --
 find . -name package-lock.json -print0|xargs -0 rm -rf --
 ```
