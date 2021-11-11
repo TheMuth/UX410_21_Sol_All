@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1636476393432_62_appdescr_ui5_setFlexExtensionPointEnabled",
+	"fileType": "change",
+	"changeType": "appdescr_ui5_setFlexExtensionPointEnabled",
+	"moduleName": "",
+	"reference": "customer.ZUX410_APP00Extension",
+	"packageName": "",
+	"content": {
+		"flexExtensionPointEnabled": true
+	},
+	"selector": {
+		"id": ""
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/customer.ZUX410_APP00Extension/changes/",
+	"projectId": "customer.ZUX410_APP00Extension",
+	"creation": "2021-11-09T16:46:33.964Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.78.11",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": true
+}

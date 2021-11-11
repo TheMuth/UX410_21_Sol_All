@@ -1,0 +1,11 @@
+{
+  "componentname": "student00.sap.training.ex12_dynamicpage",
+  "safeMode": false,
+  "appvariant": "ZUX410_APP00Extension",
+  "layer": "CUSTOMER_BASE",
+  "sourceSystem": "S4D_100",
+  "isOVPApp": false,
+  "isFioriElement": false,
+  "environment": "ABAP",
+  "ui5Version": "1.78.13"
+}

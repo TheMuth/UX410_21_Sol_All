@@ -1,0 +1,32 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="student00.sap.training.solutionhelloworld.controller.Main" displayBlock="true" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <VBox>
+					    <Text xmlns="sap.m" text="Hello World!" id="text2"/>
+                        <HBox><Label text="Firstname"/>
+                        <Input value="{appModel>/firstName}" width="10rem" /></HBox>
+                        <HBox>
+                        <Label text="Lastname"/>
+                        <Input value="{appModel>/lastName}"  width="10rem"/>
+                        </HBox>
+                        <Text text="{appModel>/firstName} {appModel>/lastName}"></Text>
+                        <Button id="idBtn1" text="Reset" press="onReset" icon="sap-icon://away"/>
+                        <Button id="idBtn2" text="Clear" press="onReset" icon="sap-icon://home"/>
+                        <Select
+						selectedKey="{appModel>/SelectedValue}"
+						items="{
+							path: 'appModel>/myList',
+							sorter: { path: 'Name' }
+						}">
+					<core:Item key="{appModel>myKey}" text="{appModel>Name}" />
+				</Select>
+                </VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

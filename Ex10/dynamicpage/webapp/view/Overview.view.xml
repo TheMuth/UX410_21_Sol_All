@@ -1,0 +1,97 @@
+<mvc:View controllerName="student00.sap.training.ex10_dynamicpage.controller.Overview"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <f:DynamicPage id="dynamicPageOverviewId"
+                    headerExpanded="true"
+                    toggleHeaderOnTitleClick="true">
+                    <f:header>
+                        <f:DynamicPageHeader pinnable="false">
+                            <f:content>
+                                <fb:FilterBar reset="onReset"
+                                    search="onSearch"
+                                    clear="onClear"
+                                    cancel="onCancel"
+                                    filtersDialogClosed="onFiltersDialogClosed"
+                                    useToolbar="true"
+                                    showGoOnFB="true"
+                                    showRestoreButton="true"
+                                    showClearButton="true"
+                                    id="idFilterBar">
+                                    <fb:filterGroupItems>
+                                        <fb:FilterGroupItem groupName="G1"
+                                            visibleInFilterBar="true"
+                                            groupTitle="carridGroup"
+                                            name="A"
+                                            label="{i18n>filterCarrid}">
+                                            <fb:control>
+                                                <Input id="idFilterCarrid"
+                                                    placeholder="{i18n>filterCarrid}"
+                                                    liveChange="onFilterChange"/>
+                                            </fb:control>
+                                        </fb:FilterGroupItem>
+                                        <fb:FilterGroupItem groupName="G2"
+                                            visibleInFilterBar="true"
+                                            groupTitle="carrnameGroup"
+                                            name="A"
+                                            label="{i18n>filterCarrname}">
+                                            <fb:control>
+                                                <Input id="idFilterCarrname"
+                                                    placeholder="{i18n>filterCarrname}"
+                                                    liveChange="onFilterChange"/>
+                                            </fb:control>
+                                        </fb:FilterGroupItem>
+                                    </fb:filterGroupItems>
+                                </fb:FilterBar>
+                            </f:content>
+                        </f:DynamicPageHeader>
+                    </f:header>
+                    <f:content>
+                        <Table id="idCarrierList"
+                            mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+                            selectionChange="onSelectionChange"
+                            updateFinished="onUpdateFinished"
+                            items="{/UX_C_Carrier_TP}">
+                            <headerToolbar>
+                                <OverflowToolbar>
+                                    <content>
+                                        <Title text="{i18n>overviewPageTitle} ({appView>/count})"
+                                            level="H2"/>
+                                        <ToolbarSpacer/>
+                                        <SearchField placeholder="{i18n>sfPlaceholder}"
+                                            search="onSearch"
+                                            width="15rem"/>
+                                        <OverflowToolbarButton press="onOpenViewSettings" id="btnsort" icon="sap-icon://sort" type="Transparent" tooltip="{i18n>btnSort}"/>
+                                        <OverflowToolbarButton press="onOpenViewSettings" id="btngroup" icon="sap-icon://group-2" type="Transparent" tooltip="{i18n>btnGrp}"/>
+                                    </content>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <columns>
+                                <Column>
+                                    <Text text="{i18n>columnId}"></Text>
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>columnName}"></Text>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem press="onPress"
+                                    type="Navigation">
+                                    <cells>
+                                        <ObjectListItem title="{Carrid}"></ObjectListItem>
+                                        <Text text="{Carrname}"></Text>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </f:content>
+                </f:DynamicPage>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

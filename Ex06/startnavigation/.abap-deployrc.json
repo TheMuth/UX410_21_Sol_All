@@ -1,0 +1,16 @@
+{
+    "deploy": {
+        "sourceFolder": "./dist",
+        "targetSystem": "http://s4d.virtual:8000",
+        "client": "100",
+        "username": "train-00",
+        "password": "ux41000",
+        "appName": "ZUX410NavStar00",
+        "description": "UX410 navigation Start 00",
+        "abapPackage": "ZTRAIN00",
+        "abapTransport": "S4DK900140"
+    },
+    "cli": {
+        "interactiveFallBack": true
+    }
+}
